@@ -1,0 +1,220 @@
+*{
+    padding: 0; margin: 0; box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+header{
+    position: fixed; top: 0; background-color: rgb(211, 199, 199); 
+    width: 100%;
+    display: flex;
+    justify-content: space-between; align-items: center;
+    padding: 10px 5%;
+}
+
+.logo{
+    font-size: 25px;
+}
+
+.logo span{
+    color: #93d6d0;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu a{
+    position: relative;
+    margin: 0 10px;
+    text-decoration: 0; color: #999;
+    transition: 0.5s;
+}
+.menu a::before{
+    /* : */
+    position: absolute; top: -2px;
+    content: "";
+    width: 0; height: 2px;
+    background-color: #93d6d0;
+    transition: 0.5s;
+}
+
+.menu a:hover{
+    color: #000; font-weight: 100; letter-spacing: 1.2px;
+}
+
+.menu a:hover::before{
+    width: 100%;
+}
+
+.home{
+    height: calc(100vh - 50px); 
+   background: url(./h.images/img1.jpg) center/cover;
+display: flex;
+   align-items: flex-end;
+   padding-left: 5%;padding-bottom: 50px;
+}
+
+.infos{
+    background-color: #fff;
+    border-radius: 6px; padding: 50px;
+    animation: anime 2s linear;
+}
+
+@keyframes anime{
+    from{ 
+        transform:translateX(-600px);
+    }
+}
+
+.infos h1{
+    font-size: 30px; text-transform: uppercase; 
+    letter-spacing: 1px;
+}
+
+.infos p{
+    margin-top: 10px; margin-bottom: 20px;
+}
+
+.infos a{
+    text-decoration: 0; color: #93d6d0;
+    border: 2px solid #93d6d0; border-radius: 6px;
+    padding: 5px 20px; margin-top: 5px;
+    font-weight: 400;
+    text-transform: capitalize;
+    transition: 0.5s;
+}
+.infos a:hover{
+    background-color: #93d6d0;
+    color: #fff; letter-spacing: 1px;
+}
+
+.service{
+    padding: 0 10%;
+}
+
+.service .title h1{
+    text-align: center; letter-spacing: 1px;
+    margin-top: 50px;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+.service .title p{
+    text-align: center; margin: 20px 0; color: #93d6d0;
+}
+.list{
+    display: grid; grid-template-columns: repeat(auto-fit, 20rem);
+    justify-content: center;gap: 20px;margin-bottom: 50px;
+}
+.list .box{
+    padding: 30px;background-color: #f3fbfa; border-radius: 6px;
+    transition: 0.5s;
+}
+.box h1{
+    text-transform: uppercase; color: #93d6d0; margin-bottom: 10px;
+    font-size: 18px; letter-spacing: 1px;
+}
+.box p{
+    font-size: 16px;
+}
+.box:hover{
+    background-color: #93d6d0;
+}
+.box:hover h1{
+    color: #fff;
+}
+.box:hover p{
+    color: #333;
+}
+
+
+.espace{
+    height: 70vh;
+    background: url(./h.images/img2.png) center/cover;
+}
+
+.avis{
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5%; min-height: 50vh; background-color: #f3fbfa;
+}
+
+.avis .left span{
+    font-weight: bold; color: #93d6d0; text-transform: uppercase;
+}
+.avis .left h1{
+    font-size: 35px; padding: 15px 0; margin-bottom: 15px;
+}
+.avis .left a{
+    background-color: #93d6d0; color: #fff; text-decoration: 0;
+    padding: 10px 25px; text-transform: uppercase;
+    
+}
+
+.avis .right p{
+    letter-spacing: 1px;
+}
+
+.end{
+    padding: 0 15%;
+}
+.end .c {
+    margin-bottom: 20px; text-align: center; letter-spacing: 1px;
+    margin-top: 50px;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+.contact{
+    display: flex; align-items: center; justify-content: space-between;
+}
+.contact .c0{
+    width: 45%; display: flex; flex-direction: column; height: 300px;
+}
+
+.contact .c0 h4{
+    margin-bottom: 20px;
+}
+
+form{
+    display: flex; flex-direction: column;
+}
+form input, textarea{
+    margin: 5px 0; padding: 5px; border: 1px solid #999;
+    resize: none; outline: 0;
+}
+
+form button{
+    width: fit-content; padding: 10px 25px; 
+    background-color:  #93d6d0; border: 0; font-weight: bold;
+    color:  #000; margin-top: 5px;
+}
+.adress{
+    width: 50%; height: 250px; border: solid; margin-top:150px;
+}
+
+iframe{
+    width: 100%; height: 100%; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer{
+    margin-top: 150px; background-color: #333; text-align: center;
+    font-size: 15px; padding: 10px 0; color: #fff;
+}
+
+footer span{
+    color: #0df3e0;
+}
+
+/* responsive */
+
+@media screen and (max-width: 610px){
+    .menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;align-items: center;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .m1, .m2{
+        display: flex; flex-direction: column;
+    }
+}
